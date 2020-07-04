@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "AppTalaud",
+    "slug": "AppTalaud",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/Newlogo.png",
+    "splash": {
+      "image": "./assets/Newlogo.png",
+      "resizeMode": "contain",
+      //"backgroundColor": "#f5f0e3",
+      "imageBackground": "./assets/sejarah2.png"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
