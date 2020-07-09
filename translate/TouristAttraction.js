@@ -20,14 +20,14 @@ export default class Posts extends Component {
     this.state = {
       data: [
         { id: "1", title: "Sara Island", tempat: "Kep.Talaud", image: "https://cdns.klimg.com/newshub.id/news/2017/07/09/136106/670x335-menikmati-keindahan-pulau-saraa-maladewa-indonesia-1707095.jpg", uri: 'https://www.youtube.com/watch?v=E7m6Ae_bqAg' },
-        { id: "2", title: "Manee Cave", tempat: "Arangkaa, Kec. Gemeh, Kab. Kepulauan Talaud.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Gua-Batu-Kapal.jpg", uri: 'https://www.youtube.com/watch?v=glEtKheeFKk' },
-        { id: "3", title: "Ampadoap Waterfall", tempat: "Beo, Kec. Beo, Kab. Kepulauan Talaud.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Air-Terjun-Ampadoap.jpg", uri: 'https://www.youtube.com/watch?v=tqlLo3HGJiI'},
-        { id: "4", title: "Weta Cave", tempat: "Jl. Memohomane, Binalang, Kec. Talaud, Kab. Kepulauan Talaud.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Goa-Weta.jpg", uri: 'https://www.youtube.com/watch?v=E7m6Ae_bqAg' },
-        { id: "5", title: "Lobo Beach", tempat: " Lobbo, di Kecamatan Beo Utara, Kab. Kepulauan Talaud.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Pantai-Lobbo.jpg", uri: 'https://www.youtube.com/watch?v=E7m6Ae_bqAg' },
-        { id: "6", title: "Karakelang Island", tempat: "Bantane, Kec. Rainis, Kab. Kepulauan Talaud.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Pulau-Karakelang.jpg", uri: 'https://www.youtube.com/watch?v=4oiAJ4Sx8T4' },
-        { id: "7", title: "Indigenous Village of Bannada", tempat: "Adat Bannada, Kec. Gemeh, Kab. Kepulauan Talaud.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Desa-Adat-Bannada.jpg", uri: 'https://www.youtube.com/watch?v=-JOD9ogm47k' },
-        { id: "8", title: "Intata Island", tempat: "Festival Mane'e , Kec. Karatung, Kab. Kepulauan Talaud ", image: "https://i.ytimg.com/vi/0MjAN57bIIo/hqdefault.jpg", uri: 'https://www.youtube.com/watch?v=0MjAN57bIIo' },
-        { id: "9", title: "Miangas Island Border Indonesia Philippines", tempat: "Miangas, Kec. Miangas, Kab. Kepulauan Talaud", image: "https://cdn2.boombastis.com/wp-content/uploads/2017/06/bandar-udara-Miangas.jpg", uri: 'https://www.youtube.com/watch?v=VTqIpFfykG4' },
+        { id: "2", title: "Manee Cave", tempat: "Arangkaa, Kec. Gemeh, Kab. talaud islands.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Gua-Batu-Kapal.jpg", uri: 'https://www.youtube.com/watch?v=glEtKheeFKk' },
+        { id: "3", title: "Ampadoap Waterfall", tempat: "Beo, Kec. Beo, Kab. talaud islands.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Air-Terjun-Ampadoap.jpg", uri: 'https://www.youtube.com/watch?v=tqlLo3HGJiI'},
+        { id: "4", title: "Weta Cave", tempat: "Jl. Memohomane, Binalang, Kec. Talaud, Kab. talaud islands.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Goa-Weta.jpg", uri: 'https://www.youtube.com/watch?v=E7m6Ae_bqAg' },
+        { id: "5", title: "Lobo Beach", tempat: " Lobbo, di Kecamatan Beo Utara, Kab. talaud islands.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Pantai-Lobbo.jpg", uri: 'https://www.youtube.com/watch?v=E7m6Ae_bqAg' },
+        { id: "6", title: "Karakelang Island", tempat: "Bantane, Kec. Rainis, Kab. talaud islands.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Pulau-Karakelang.jpg", uri: 'https://www.youtube.com/watch?v=4oiAJ4Sx8T4' },
+        { id: "7", title: "Indigenous Village of Bannada", tempat: "Adat Bannada, Kec. Gemeh, Kab. talaud islands.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Desa-Adat-Bannada.jpg", uri: 'https://www.youtube.com/watch?v=-JOD9ogm47k' },
+        { id: "8", title: "Intata Island", tempat: "Festival Mane'e , Kec. Karatung, Kab. talaud islands ", image: "https://i.ytimg.com/vi/0MjAN57bIIo/hqdefault.jpg", uri: 'https://www.youtube.com/watch?v=0MjAN57bIIo' },
+        { id: "9", title: "Miangas Island Border Indonesia Philippines", tempat: "Miangas, Kec. Miangas, Kab. talaud islands", image: "https://cdn2.boombastis.com/wp-content/uploads/2017/06/bandar-udara-Miangas.jpg", uri: 'https://www.youtube.com/watch?v=VTqIpFfykG4' },
       ]
     };
   }

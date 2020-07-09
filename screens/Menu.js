@@ -8,6 +8,7 @@ import Tempatwisata from './Tempatwisata';
 import Rumahadat from './Rumahadat';
 import Pakaianadat from './Pakaianadat';
 import SejarahTalaud from './Sejarah';
+import home from './Home'
 
 
 
@@ -39,16 +40,19 @@ const getTabBarIcon = (navigation, tintColor) => {
   const { routeName } = navigation.state;
   let IconComponent = Ionicons;
   let iconName;
-  if (routeName == 'Sejarah') {
+  if(routeName == 'HOME'){
+    iconName = `ios-home`;
+  }
+  if (routeName == 'SEJARAH') {
     iconName = `ios-globe`;
   }
-  if (routeName == 'PakaianAdat') {
+  if (routeName == 'PAKAIANADAT') {
     iconName = `ios-shirt`;
-  } if (routeName == 'RumahAdat') {
+  } if (routeName == 'RUMAHADAT') {
     iconName = `md-home`;
-  } if (routeName == 'TempatWisata') {
+  } if (routeName == 'TEMPATWISATA') {
     iconName = `ios-pin`;
-  } if (routeName == 'About') {
+  } if (routeName == 'ABOUT') {
     iconName = `ios-information-circle`;}
 
   // You can return any component that you like here!
@@ -60,12 +64,13 @@ const getTabBarIcon = (navigation, tintColor) => {
 
 
 const Home = createBottomTabNavigator({
- 
-Sejarah: {screen: SejarahTalaud},
-PakaianAdat: { screen: Pakaianadat },
-RumahAdat: { screen: Rumahadat },
-TempatWisata: { screen: Tempatwisata },
-About : {screen:UserProfileView},
+
+ HOME : {screen: home},
+SEJARAH: {screen: SejarahTalaud},
+PAKAIANADAT: { screen: Pakaianadat },
+RUMAHADAT: { screen: Rumahadat },
+TEMPATWISATA: { screen: Tempatwisata },
+ABOUT : {screen:UserProfileView},
 
  },
  {

@@ -14,36 +14,105 @@ const onClickListener = () => {
         
     ,[
       {
-        text: 'watch',
+        text: 'Play Video',
         onPress: () => Linking.openURL('https://www.youtube.com/watch?v=YLZ9l1TDATQ')
       },
       {
       
+      },{
+        text: 'Back'
       },
       {backlabel: false}
       ]);
 }
 
 const onClickListener2 = () => {
-    Alert.alert("Bara Dance",`Tari Bara'a mengkisahkan tentang Keberanian Masyarakat Talaud dalam medan perang untuk mempertahankan wilayahnya dari ancaman Perompak dan Penjajah.`
+    Alert.alert("Bara Dance",`Bara'a Dance tells the story of the Courage of the Talaud Community in the battlefield to defend their territory from the threat of pirates and invaders.`
         
     ,[
       {
-        text: 'watch',
+        text: 'Play Video',
         onPress: () => Linking.openURL('https://www.youtube.com/watch?v=2Heq_pUqOoQ')
       },
       {
       
+      },{
+        text: 'Back'
+      },
+      {backlabel: false}
+      ]);
+}
+const onClickListener3 = () => {
+    Alert.alert("Tari Tulude ", `TULUDE or MENULUDE is derived from the word: Suhude which means to reject Tulude which means to be afraid or let go of Menulude means to be alarmed or let go of the Customary Event of MENULUDE is to Adore / Praise TWO / RUATA, To give thanks for the protection of Genggonalangi, Asking for prayers for future life it is protected by Genggonalangi.
+
+Menulude is one of the Sangihe traditional ceremonies held at the end of January (January 31 which is also the Anniversary of the Sangihe Islands District) to give thanks to God's blessings in the past year and ask for blessings and forgiveness of sins as a provision of life in the new year. In this ceremony it is necessary to present customary elders or the Government along with all the people. The menulude ceremonies referred to are:
+
+The ceremony for the pickup of the traditional elders (Government) Mendengeng sake (Regional Literature means inviting guests to ride the traditional house) Prior to Continent Continent and Government (Prayer for blessing and begging for forgiveness) .`
+        
+    ,[
+      {
+        text: 'Play Video',
+        onPress: () => Linking.openURL('https://www.youtube.com/watch?v=2Heq_pUqOoQ')
+      },
+      {
+      
+      },{
+        text: 'Back'
+      },
+      {backlabel: false}
+      ]);
+}
+const onClickListener4 = () => {
+    Alert.alert("Alabadiri Dance ", `Alabadiri Dance is a dance created by King DALERO a Raja Tabukan brother of PANDIALANG in the 18th century. At that time PANDIALANG became a Jogugu in the Sahabe, and he created the Sahabe Ransang Dance meaning the Dance of the Sahabe. is the bodyguards themselves so that this dance is a bodyguard dance.
+This dance has 8 (eight) dance movements, namely:
+The kulubalang movement symbolizes harmony and cooperation between the people and the government.
+The tokting movement symbolizes that all regulations can be obeyed and implemented as well as possible.
+The ring movement symbolizes the warning that leaders must carry out their duties properly.
+The knife movement symbolizes the people's vow to defend the homeland and the nation, and gives warnings to dishonest leaders.
+Kaliau's movements in the ear symbolize that all commands are always heard and carried out
+The Kaliau movement on the knee symbolizes that the Government is loved by the people.
+The Dancing Movement symbolizes people's excitement over the success achieved.
+The mengaemba movement symbolizes the joy of the people with the government.`
+        
+    ,[
+      {
+        text: 'Play Video',
+        onPress: () => Linking.openURL('https://www.youtube.com/embed/uk4QU7RgN40; frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>')
+      },
+      {
+      
+      },{
+        text: 'Back'
+      },
+      {backlabel: false}
+      ]);
+}
+const onClickListener5 = () => {
+    Alert.alert("Tari Mane’e",`Tradisi ini muncul sekitar abad ke 12 di lingkungan masyarakat kepulauan ”Nanusa”, yang sampai sekarang ini masih dilaksanakan bahkan telah menjadi agenda tetap prosesi Mane’e di Kabupaten Talaud.
+
+Mane’e berasal dari kata ”See yang artinya Ya” atau setuju/sepakat, sehingga kata Mane’e diartikan ” Penangkapan ikan secara tradisional melalui masyarakat yang bermusyawarah dan bermufakat untuk menangkap ikan secara bersama – sama`
+        
+    ,[
+      {
+        text: 'Play Video',
+        onPress: () => Linking.openURL('https://youtu.be/Oq_FBUrpyOU')
+      },
+      {
+      
+      },{
+        text: 'Back'
       },
       {backlabel: false}
       ]);
 }
 
+
     return (
 
         
-            <SafeAreaView style={styles.container} >
-            <ScrollView style={styles.scrollView}>
+             <View style={styles.container}>
+                 <View style={{width: 450, height: 850}}>
+            <ScrollView >
                 <View style={styles.bodyView}>
                     <View style={styles.titileBody} >
                         <Text style={styles.titleStory}>Talaud Islands Region</Text>
@@ -196,26 +265,61 @@ Another story also tells of the origin of the talaud people from the southern Ph
                                 <Text style={{fontSize: 30, textAlign:'center',fontWeight:'bold'}}>
                                Traditional dance</Text>
 
-                                <Text style={{fontSize: 24}}>Bara dance</Text>
-                                <View style={{alignItems:'center'}}> 
+                                <Text style={{fontSize: 24}}>Bara Dance</Text>
+                                <View style={{flex:1, borderRadius: 15}}> 
                                 <TouchableOpacity  onPress={onClickListener2}>
-                                <Image source={require('../assets/tari/tari_bara.jpg')}/>
+                                <Image 
+                                style={styles.image}
+                                source={require('../assets/tari/tari_bara.jpg')}/>
                                 </TouchableOpacity>
-                                 <Text>press picture to see video...</Text>
+                                 <Text>Click on the picture to see more info...</Text>
                                 </View>
 
-                                <Text style={{fontSize: 24}}>Gunde dance</Text>
-                                <View style={{alignItems:'center'}}> 
+                                <Text style={{fontSize: 24}}>Gunde Dance</Text>
+                                <View style={{flex:1, borderRadius: 15}}> 
                                 <TouchableOpacity  onPress={onClickListener}>
-                                <Image source={require('../assets/tari/tari_gunde.jpg')}/>
+                                <Image
+                                    style={styles.image}
+                                 source={require('../assets/tari/tari_gunde.jpg')}/>
                                 
                                 </TouchableOpacity>
-                                <Text>press picture to see video...</Text>
+                                <Text>Click on the picture to see more info...</Text>
+                                </View>
+
+                                 <Text style={{fontSize: 24}}>Tulude Dance</Text>
+                                <View style={{flex:1,borderRadius: 15}}> 
+                                <TouchableOpacity  onPress={onClickListener3}>
+                                <Image 
+                                style={styles.image}
+                                source={require('../assets/tari/tulude.jpeg')}/>
+                                </TouchableOpacity>
+                                <Text>Click on the picture to see more info...</Text>
+                                </View>
+
+                                <Text style={{fontSize: 24}}>Salo Dance</Text>
+                                <View style={{flex:1,borderRadius: 15}}> 
+                                <TouchableOpacity  onPress={onClickListener4}>
+                                <Image 
+                                style={styles.image}
+                                source={require('../assets/tari/tari_alabadiri.jpg')}/>
+                                </TouchableOpacity>
+                                <Text>Click on the picture to see more info...</Text>
+                                </View>
+
+                                 <Text style={{fontSize: 24}}>Mane'e Dance</Text>
+                                <View style={{flex:1,borderRadius: 15}}> 
+                                <TouchableOpacity  onPress={onClickListener5}>
+                                <Image 
+                                style={styles.image}
+                                source={require('../assets/tari/Tarimanee.png')}/>
+                                </TouchableOpacity>
+                                <Text>Click on the picture to see more info...</Text>
                                 </View>
                         </View>
                     </View>
             </ScrollView>
-        </SafeAreaView>
+            </View>
+        </View>
     
           
     );
@@ -225,8 +329,9 @@ export default history;
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        marginTop: Constants.statusBarHeight,
+         height: 900,
+         alignItems: 'center',
+                backgroundColor: '#f6cd61',
     },
     body: {
         flex: 1,

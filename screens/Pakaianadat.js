@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, TouchableHighlight,ScrollView, Alert, Button,Linking } from "react-native";
+import { StyleSheet, Text, View, TouchableHighlight,ScrollView, Alert, Button,Linking, Image } from "react-native";
 import { SliderBox } from "react-native-image-slider-box";
 
 export default class App extends Component {
@@ -24,35 +24,40 @@ Satu hal yang cukup penting dan dapat membedakan upacara yang satu dengan yang l
 Khusus untuk ikat kepala, bagian yang menjulangnya diletakkan di bagian depan kepala. Adapun ujungnya diikatkan di belakang kepala      `,
     [
       {
-        text: 'watch',
+        text: 'Lihat Vidio',
         onPress: () => Linking.openURL('https://www.youtube.com/')
       },
       {},
+      {
+        text: 'Kembali'
+      },
       {backlabel: false}
     ]);
   }
+
+
+
+
+
   render() {
     return (
-
       <View style={styles.container}>
-      <ScrollView style={{ height: 100, width: '100%'}}>
+      <View style={{width: 470, height: 880,backgroundColor:'#f6cd61',}}>
+      <ScrollView style={{ height: "100%", width: '100%'}}>
       <View style={styles.boxheaderText}>
-         <Text style={styles.headerText}>PAKAIN ADAT SUKU TALAUD</Text>
+         <Text style={styles.headerText}>PAKAIAN ADAT SUKU TALAUD</Text>
       </View>
         <View style={styles.box}>
           <SliderBox
           style={styles.imageBox}
           images={this.state.images}
-          onCurrentImagePressed={() => this.pressed()}
+         /* onCurrentImagePressed={() => this.pressed()}*/
           />
           
         </View>
         <View style={styles.bodyText}>
-              <Text
-              style={{color: 'green', textAlign: 'center'}}>
-                press image to read more info...
-              </Text>
-           <View style={{textAlign: 'justify', width: '96%'}}>
+          
+              <View style={{textAlign: 'justify',  backgroundColor:'#f6cd61'}}>
                <Text
               style={styles.textBody}>
                 Pakaian adat Sangihe Talaud merupakan pakaian tradisional yang biasa di kenakan oleh masyarkat etnis Sangihe dan Talud untuk keperluan Upacara adat yang disebut juga Tulude.
@@ -60,9 +65,46 @@ Khusus untuk ikat kepala, bagian yang menjulangnya diletakkan di bagian depan ke
                 adat perbedaan derajat kaum bangsawan dan masyarakat biasa, tapi tidak dapat membedakan  bentuk pakain adat yang di gunakan kaum laki-laki maupun perempuan dalam cara berbusana, seperti  pakaian adat yang di kenakan para kaum pria dalam upacar Tulude.
                 Busana baju adat lengan panjang yang di gunakan sebagai lambang keagungan masyarakat sangihe dan Talaud.`
               </Text>
-              </View>   
+               <TouchableHighlight style={[styles.buttonContainer, styles.sendButton]} onPress={() => this.pressed('login')}>
+            <Text style={styles.buttonText}>Selantujnya..</Text>
+          </TouchableHighlight>
+
+             <View style={{alignItems: 'center'}}>
+             <Image source={require('../assets/pakaianAdat/bajuAdatRaja.png')} style={{width: 250, height:350,}}/>
+              </View>
+             <Text
+              style={styles.textBody}>
+               Baju adat Ratumbanua (Raja), ini biasanya digunakan pada saat perayaan penting seperti acara upacara adat, pesta rakyat, pesta pernikahan dan kegiatan dari pemerintahan. baju adat ini hanya bisa dipakai oleh seorang Ratumbanua(Raja) atau garis keturunanya...
+              </Text>
+
+             <View style={{alignItems: 'center'}}>
+              <Image source={require('../assets/pakaianAdat/BajuAdat1UntukMenyambutTamu.png')} style={{width: 250, height:350}}/>
+              </View>
+             <Text
+              style={styles.textBody}>
+              Baju adat untuk penyambutan Tamu ini digunakan pada saat penjemputan tamu-tamu penting seperti gubernur, bupati dan tamu dari luar daerah yang memiliki status tinggi entah itu di pemerintahan maupun bangsawan ataupun tamu penting dari suatu organisasi...
+              </Text>
+
+             <View style={{alignItems: 'center'}}>
+                    <Image source={require('../assets/pakaianAdat/BjuTariPoco2Pria.png')} style={{width: 250, height:350}}/>
+                    </View>
+              <Text
+              style={styles.textBody}>
+                Pakaian ini di gunakan pada saat ada acara adat, pesta pernikahan, pesta rakyat bahkan lomba tari. dimana dari semua acara dan pesta yang digelar biasanya, di adakan acara khusus untuk tarian Poco-Poco. Dan fungsi dari penari pria ini menuntun si penari wanita untuk berjoget...
+              </Text>
+
+              <View style={{alignItems: 'center'}}>
+                    <Image source={require('../assets/pakaianAdat/BjuTariPoco2Wanita.png')} style={{width: 250, height:350}}/>
+                    </View>
+              <Text
+              style={styles.textBody}>
+                Pakaian adat ini di gunakan pada saat ada acara adat, pesta pernikahan, pesta rakyat bahkan lomba tari. dimana dari semua acara dan pesta yang digelar biasanya, di adakan acara khusus untuk tarian Poco-Poco.
+              </Text>
+              </View>
+             
         </View>
         </ScrollView>
+         </View>   
       </View>
     );
   }
@@ -71,14 +113,15 @@ Khusus untuk ikat kepala, bagian yang menjulangnya diletakkan di bagian depan ke
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: '100%',
-    height: '100%'
+   alignItems:'center',
+      backgroundColor:'#f6cd61'
   },
   box:{
     flex:1,
     width: '100%',
     height: 800,
     justifyContent: 'center',
+    borderRadius: 15
 
 
   },
@@ -88,7 +131,7 @@ const styles = StyleSheet.create({
     height: 800,
    alignItems: 'center',
    backgroundColor:'#f5f0e3',
-
+   borderRadius: 15
   },
   button: {
     height: 10
@@ -112,7 +155,7 @@ const styles = StyleSheet.create({
   },
   textBody:{
     fontSize: 18,
-    textAlign: 'justify',
+    textAlign: 'left',
     marginTop: 10,
     color: 'black',
   },
@@ -120,5 +163,17 @@ const styles = StyleSheet.create({
 
   buttonText: {
     color: '#FFFFFF',
+  },
+   buttonContainer: {
+    height: 45,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 20,
+    width: 100,
+    borderRadius: 30,
+  },
+    sendButton: {
+    backgroundColor: "#1564bf",
   },
 });

@@ -10,23 +10,51 @@ import {
 } from 'react-native';
 
 export default class UserProfileView extends Component {
+_onPress= (text) =>{
+  Alert.alert("Talaud Mobile Application",`Version 1.0.0`,
+  [
+  {
 
-  _onPress= (text) =>{
-  Alert.alert("Talaud Mobile Application",`Version 1.0.0`)
-}
+  },{
 
+  },{
+    text: 'Back'
+  },
+     {backlabel: false}
+  ]
+)}
+
+
+ 
   render() {
     return (
    
       <View style={styles.container}>
-             <ScrollView>
+          <ScrollView>
+            <Text style={{
+              backgroundColor: '#f6cd61',
+               textAlign: 'center', 
+               fontSize: 20,
+               fontWeight: 'bold'
+               }}>
+              Developers:
+            </Text>
+          <View style={styles.header}>
+            <View style={styles.headerContent}>
+
+                <Image style={{width: 300, height:100}}
+                  source={require('../assets/Fik.png')}/>
+              
+            </View>
+          </View>
+
           <View style={styles.header}>
             <View style={styles.headerContent}>
                 <Image style={styles.avatar}
                   source={require('../assets/profil.jpg')}/>
                 <Text style={styles.name}>Frankly Smit Pangemanan </Text>
                 <Text style={styles.userInfo}>s21610184@student.unklab.ac.id </Text>
-                <Text style={styles.userInfo}>Talaud </Text>
+                <Text style={styles.userInfo}>Universitas Klabat </Text>
             </View>
           </View>
 
@@ -35,12 +63,12 @@ export default class UserProfileView extends Component {
                 <Image style={styles.avatar}
                   source={require('../assets/reno.jpg')}/>
                 <Text style={styles.name}>Renoreins Rumegang</Text>
-                <Text style={styles.userInfo}>s1410309@student.unklab.ac.id </Text>
-                <Text style={styles.userInfo}>Talaud </Text>
+                <Text style={styles.userInfo}>s21410309@student.unklab.ac.id </Text>
+                <Text style={styles.userInfo}>Universitas Klabat </Text>
             </View>
           </View >
 
-           <View style={styles.header}>
+             <View style={styles.header}>
             <View style={styles.headerContent}>
                 <Image style={styles.avatar}
                   source={require('../assets/Advicor.png')}/>
@@ -50,21 +78,20 @@ export default class UserProfileView extends Component {
                 <Text style={styles.userInfo}>stenly.adam@unklab.ac.id</Text>
                 <Text style={styles.userInfo}>S.Kom, Universitas Klabat, Indonesia </Text>
                 <Text style={{fontSize: 12,color:'#778899'}}>M.Sc, National Taiwan University of Science and Technology, Taiwan R.O.C</Text>
-                <Text style={styles.userInfo}>Num: +62 431 - 891035</Text>   
+               
             </View>
 
           </View >
           </ScrollView>
 
-          <View style={styles.body}>
           <Button
+          color='#3797a4'
           onPress={() =>this._onPress('data')}
-           title="info"
+           title="About App"
 
           />
-        
+         
 
-      </View>
       </View>
       
     );
@@ -101,8 +128,10 @@ const styles = StyleSheet.create({
   },
   body:{
     
-    backgroundColor: "#DCDCDC",
-    alignItems:'center',
+    backgroundColor: "#e5e5e5",
+    alignItems: 'center',
+    borderRadius: 50,
+
   },
   item:{
     flexDirection : 'row',

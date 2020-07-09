@@ -11,8 +11,18 @@ import {
 
 export default class UserProfileView extends Component {
 _onPress= (text) =>{
-  Alert.alert("Talaud Mobile Application",`Version 1.0.0`)
-}
+  Alert.alert("Talaud Mobile Application",`Version 1.0.0`,
+  [
+  {
+
+  },{
+
+  },{
+    text: 'Kembali'
+  },
+     {backlabel: false}
+  ]
+)}
 
 
  
@@ -29,6 +39,14 @@ _onPress= (text) =>{
                }}>
               Developers:
             </Text>
+          <View style={styles.header}>
+            <View style={styles.headerContent}>
+
+                <Image style={{width: 300, height:100}}
+                  source={require('../assets/Fik.png')}/>
+              
+            </View>
+          </View>
 
           <View style={styles.header}>
             <View style={styles.headerContent}>
@@ -66,13 +84,13 @@ _onPress= (text) =>{
           </View >
           </ScrollView>
 
-          <View style={styles.body}>
           <Button
+          color='#3797a4'
           onPress={() =>this._onPress('data')}
            title="info"
 
           />
-          </View>
+         
 
       </View>
       
@@ -110,8 +128,10 @@ const styles = StyleSheet.create({
   },
   body:{
     
-    backgroundColor: "#DCDCDC",
-    alignItems:'center',
+    backgroundColor: "#e5e5e5",
+    alignItems: 'center',
+    borderRadius: 50,
+
   },
   item:{
     flexDirection : 'row',

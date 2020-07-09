@@ -9,31 +9,98 @@ import { FlatList } from 'react-native-gesture-handler';
 const SejarahTalaud = () => {
 
    
-const onClickListener = () => {
+const onClickListener2 = () => {
     Alert.alert("Tari Gunde",`Tari Gunde adalah tari tradisional etnis Sangihe-Talaud yang melukiskan ketulusan budi pekerti wanita. Tari ini pada mulanya adalah tari penyembahan ...`
         
     ,[
       {
-        text: 'watch',
-        onPress: () => Linking.openURL('https://www.youtube.com/watch?v=YLZ9l1TDATQ')
+        text: 'Lihat Vidio',
+        onPress: () => Linking.openURL('https://www.youtube.com/watch?v=fgrcPzuITp8')
       },
       {
       
+      },{
+        text: 'Kembali'
       },
       {backlabel: false}
       ]);
 }
 
-const onClickListener2 = () => {
+const onClickListener = () => {
     Alert.alert("Tari Bara",`Tari Bara'a mengkisahkan tentang Keberanian Masyarakat Talaud dalam medan perang untuk mempertahankan wilayahnya dari ancaman Perompak dan Penjajah.`
         
     ,[
       {
-        text: 'watch',
+        text: 'Lihat Vidio',
         onPress: () => Linking.openURL('https://www.youtube.com/watch?v=2Heq_pUqOoQ')
       },
       {
       
+      },{
+        text: 'Kembali'
+      },
+      {backlabel: false}
+      ]);
+}
+const onClickListener3 = () => {
+    Alert.alert("Tari Tulude",`TULUDE atau MENULUDE berasal dari kata :Suhude yang berarti tolak Tulude yang berarti hentar atau lepaskan Menulude berarti menghentar atau melepaskan Maksud Acara Adat MENULUDE ialah Memuja / Memuji DUATA / RUATA, Mengucap syukur atas perlindungan Genggonalangi, Memohon doa agar kehidupan mendatang itu dilindungi oleh Genggonalangi.
+
+Menulude adalah salah satu upacara adat Sangihe yang dilaksanakan pada setiap akhir bulan januari (31 Januari yang sekaligus merupakan Hari Ulang Tahun Kabupaten Kepulauan Sangihe) untuk mensyukuri berkat Tuhan pada tahun lampau dan memohon berkat serta pengampunan dosa sebagai bekal hidup pada tahun baru. Dalam upacara ini perlu hadir sesepuh adat atau Pemerintah bersama seluruh rakyat. Adapun tata upacara menulude dimaksud adalah :
+
+Upacara penjemputan para sesepuh adat (Pemerintah) Mendangeng sake (Sastra Daerah bermakna mempersilahkan tamu naik rumah adat) Menahulending Benua dan Pemerintah (Doa restu dan mohonpengampunan) Sasalamate (Syukuran dan pujian) Memoto Tamo (Pemotongan Kue Adat) Pesta rakyat dengan menampilankan atraksi kesenian daerah.`
+        
+    ,[
+      {
+        text: 'Lihat Vidio',
+        onPress: () => Linking.openURL('https://www.youtube.com/watch?v=2Heq_pUqOoQ')
+      },
+      {
+      
+      },{
+        text: 'Kembali'
+      },
+      {backlabel: false}
+      ]);
+}
+const onClickListener4 = () => {
+    Alert.alert("Tari Alabadiri",`Tari Alabadiri adalah tarian yang diciptakan oleh Raja DALERO seorang Raja Tabukan saudara dari PANDIALANG pada abad ke 18. Pada saat itu PANDIALANG menjadi seorang Jogugu di Sahabe, dan ia mencipakan Tari Ransang Sahabe artinya Tarian dari Sahabe. Pada mulanya para penarinya adalah para pengawalnya sendiri sehinggah tari ini adalah tari pengawal.
+Tari ini mempunyai 8 (delapan) gerakan tari yaitu :
+Gerakan kulubalang melambangkan kerukunan dan kerja sama rakyat dan pemerintah.
+Gerakan tokting melambangkan bahwa segala peraturan dapat ditaati dan dilaksanakan dengan sebaik-baiknya.
+Gerakan cincin melambangkan tanda peringatan bahwa para pemimpin harus melaksanakan tugas kewajiban dengan baik.
+Gerakan pisau melambangkan rakyat bersumpah bela nusa dan bangsa, serta memberi peringatan pada pemimpin yang tidak jujur.
+Gerakan kaliau di telinga melambangkan bahwa segala perintah selalu didengar dan dilaksanakan
+Gerakan kaliau di lutut melambangkan bahwa Pemerintah dicintai rakyat.
+Gerakan Menari melambangkan kegembiraan masyarakat atas keberhasilan yang dicapai .
+Gerakan mengaemba melambangkan sukacita rakyat dengan adanya pemerintah.`
+        
+    ,[
+      {
+        text: 'Lihat Vidio',
+        onPress: () => Linking.openURL('#')
+      },
+      {
+      
+      },{
+        text: 'Kembali'
+      },
+      {backlabel: false}
+      ]);
+}
+const onClickListener5 = () => {
+    Alert.alert("Tari Mane’e",`Tradisi ini muncul sekitar abad ke 12 di lingkungan masyarakat kepulauan ”Nanusa”, yang sampai sekarang ini masih dilaksanakan bahkan telah menjadi agenda tetap prosesi Mane’e di Kabupaten Talaud.
+
+Mane’e berasal dari kata ”See yang artinya Ya” atau setuju/sepakat, sehingga kata Mane’e diartikan ” Penangkapan ikan secara tradisional melalui masyarakat yang bermusyawarah dan bermufakat untuk menangkap ikan secara bersama – sama`
+        
+    ,[
+      {
+        text: 'Lihat Vidio',
+        onPress: () => Linking.openURL('https://youtu.be/Oq_FBUrpyOU')
+      },
+      {
+      
+      },{
+        text: 'Kembali'
       },
       {backlabel: false}
       ]);
@@ -42,8 +109,9 @@ const onClickListener2 = () => {
     return (
 
         
-            <SafeAreaView style={styles.container} >
-            <ScrollView style={styles.scrollView}>
+      <View style={styles.container}>
+           <View style={{width: 450, height: 850}}>
+            <ScrollView >
                 <View style={styles.bodyView}>
                     <View style={styles.titileBody} >
                         <Text style={styles.titleStory}>Daerah Kepulauan Talaud </Text>
@@ -198,24 +266,60 @@ Cerita lain juga mengatakan tentang asal usul orang talaud berasal dari Filipina
                                 Tarian Adat</Text>
 
                                 <Text style={{fontSize: 24}}>Tari Bara</Text>
-                                <View style={{alignItems:'center'}}> 
-                                <TouchableOpacity  onPress={onClickListener2}>
-                                <Image source={require('../assets/tari/tari_bara.jpg')}/>
+                                <View style={{flex: 1}}> 
+                                <TouchableOpacity  onPress={onClickListener}>
+                                <Image
+                                    style={styles.image}
+                                 source={require('../assets/tari/tari_bara.jpg')}/>
                                 </TouchableOpacity>
-                                <Text>press picture to see video...</Text>
+                                <Text>Klik pada gambar untuk melihat info lebih lanjut...</Text>
                                 </View>
 
                                 <Text style={{fontSize: 24}}>Tari Gunde</Text>
-                                <View style={{alignItems:'center'}}> 
-                                <TouchableOpacity  onPress={onClickListener}>
-                                <Image source={require('../assets/tari/tari_gunde.jpg')}/>
+                                <View style={{flex:1,borderRadius: 15}}> 
+                                <TouchableOpacity  onPress={onClickListener2}>
+                                <Image 
+                                style={styles.image}
+                                source={require('../assets/tari/tari_gunde.jpg')}/>
                                 </TouchableOpacity>
-                                <Text>press picture to see video...</Text>
+                                <Text>Klik pada gambar untuk melihat info lebih lanjut...</Text>
+                                </View>
+
+                                <Text style={{fontSize: 24}}>Tari Tulude</Text>
+                                <View style={{flex:1,borderRadius: 15}}> 
+                                <TouchableOpacity  onPress={onClickListener3}>
+                                <Image 
+                                style={styles.image}
+                                source={require('../assets/tari/tulude.jpeg')}/>
+                                </TouchableOpacity>
+                                <Text>Klik pada gambar untuk melihat info lebih lanjut...</Text>
+                                </View>
+
+                                <Text style={{fontSize: 24}}>Tari Salo</Text>
+                                <View style={{flex:1,borderRadius: 15}}> 
+                                <TouchableOpacity  onPress={onClickListener4}>
+                                <Image 
+                                style={styles.image}
+                                source={require('../assets/tari/tari_alabadiri.jpg')}/>
+                                </TouchableOpacity>
+                                <Text>Klik pada gambar untuk melihat info lebih lanjut...</Text>
+                                </View>
+
+                                 <Text style={{fontSize: 24}}>Tari Manee</Text>
+                                <View style={{flex:1,borderRadius: 15}}> 
+                                <TouchableOpacity  onPress={onClickListener5}>
+                                <Image 
+                                style={styles.image}
+                                source={require('../assets/tari/Tarimanee.png')}/>
+                                </TouchableOpacity>
+                                <Text>Klik pada gambar untuk melihat info lebih lanjut...</Text>
                                 </View>
                         </View>
                     </View>
             </ScrollView>
-        </SafeAreaView>
+       </View> 
+
+    </View>
     
           
     );
@@ -225,8 +329,9 @@ export default SejarahTalaud;
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        marginTop: Constants.statusBarHeight,
+        height: 900,
+         alignItems: 'center',
+                backgroundColor: '#f6cd61',
     },
     body: {
         flex: 1,
@@ -234,7 +339,7 @@ const styles = StyleSheet.create({
         height:' 50%'
     },
     scrollView: {
-        backgroundColor: '#f6cd61',
+    
         marginHorizontal: 10,
     },
     titleStory: {
@@ -263,6 +368,7 @@ const styles = StyleSheet.create({
       image: {
           marginVertical: 12,
         width: '96%', height: 400,
+        borderRadius: 15
         
     },
     imageBingkai: {

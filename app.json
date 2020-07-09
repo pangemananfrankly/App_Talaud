@@ -1,27 +1,16 @@
-{
-  "expo": {
-    "name": "AppTalaud",
-    "slug": "AppTalaud",
-    "version": "1.0.0",
-    "orientation": "portrait",
+ {
+   "expo": {
+    "name": "Taloda",
     "icon": "./assets/Newlogo.png",
-    "splash": {
-      "image": "./assets/Newlogo.png",
-      "resizeMode": "contain",
-      //"backgroundColor": "#f5f0e3",
-      "imageBackground": "./assets/sejarah2.png"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "version": "7.10.3",
+    "slug": "Taloda",
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.Taloda.Taloda",
+      "buildNumber": "1.0.0"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "android": {
+      "package": "com.Taloda.Taloda",
+      "versionCode": 1
     }
-  }
-}
+   }
+ }

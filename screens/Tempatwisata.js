@@ -9,9 +9,9 @@ import {
   ScrollView,
   FlatList,
   Button,
-  Linking
+  Linking,
+ WebView,
 } from 'react-native';
-import { WebView } from 'react-native';
 
 export default class Posts extends Component {
 
@@ -19,15 +19,14 @@ export default class Posts extends Component {
     super(props);
     this.state = {
       data: [
-        { id: "1", title: "Pulau sara", tempat: "Kep.Talaud", image: "https://cdns.klimg.com/newshub.id/news/2017/07/09/136106/670x335-menikmati-keindahan-pulau-saraa-maladewa-indonesia-1707095.jpg", uri: 'https://www.youtube.com/watch?v=E7m6Ae_bqAg' },
+        { id: "1", title: "Pulau sara", tempat: "Kep.Talaud", image: "https://cdns.klimg.com/newshub.id/news/2017/07/09/136106/670x335-menikmati-keindahan-pulau-saraa-maladewa-indonesia-1707095.jpg", uri: 'https://www.youtube.com/watch?v=c5Lzv2cWQO8&t=41s' },
         { id: "2", title: "Gua Manee", tempat: "Arangkaa, Kec. Gemeh, Kab. Kepulauan Talaud.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Gua-Batu-Kapal.jpg", uri: 'https://www.youtube.com/watch?v=glEtKheeFKk' },
-        { id: "3", title: "Air Terjun Ampadoap ", tempat: "Beo, Kec. Beo, Kab. Kepulauan Talaud.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Air-Terjun-Ampadoap.jpg", uri: 'https://www.youtube.com/watch?v=tqlLo3HGJiI'},
-        { id: "4", title: "Goa Weta", tempat: "Jl. Memohomane, Binalang, Kec. Talaud, Kab. Kepulauan Talaud.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Goa-Weta.jpg", uri: 'https://www.youtube.com/watch?v=E7m6Ae_bqAg' },
-        { id: "5", title: "Pantai Lobo", tempat: " Lobbo, di Kecamatan Beo Utara, Kab. Kepulauan Talaud.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Pantai-Lobbo.jpg", uri: 'https://www.youtube.com/watch?v=E7m6Ae_bqAg' },
-        { id: "6", title: "Pulau Karakelang", tempat: "Bantane, Kec. Rainis, Kab. Kepulauan Talaud.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Pulau-Karakelang.jpg", uri: 'https://www.youtube.com/watch?v=4oiAJ4Sx8T4' },
-        { id: "7", title: "Desa Adat Bannada", tempat: "Adat Bannada, Kec. Gemeh, Kab. Kepulauan Talaud.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Desa-Adat-Bannada.jpg", uri: 'https://www.youtube.com/watch?v=-JOD9ogm47k' },
-        { id: "8", title: "Pulau Intata", tempat: "Festival Mane'e , Kec. Karatung, Kab. Kepulauan Talaud ", image: "https://i.ytimg.com/vi/0MjAN57bIIo/hqdefault.jpg", uri: 'https://www.youtube.com/watch?v=0MjAN57bIIo' },
-        { id: "9", title: "Pulau Miangas Perbatasan Indonesia Filipina", tempat: "Miangas, Kec. Miangas, Kab. Kepulauan Talaud", image: "https://cdn2.boombastis.com/wp-content/uploads/2017/06/bandar-udara-Miangas.jpg", uri: 'https://www.youtube.com/watch?v=VTqIpFfykG4' },
+        { id: "3", title: "Air Terjun Ampadoap ", tempat: "Beo, Kec. Beo, Kab. Kepulauan Talaud.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Air-Terjun-Ampadoap.jpg", uri: 'https://www.youtube.com/watch?v=Icg7sDPb-40'},
+        { id: "4", title: "Goa Lahu", tempat: "Jl. Pantai Lahu, Lahu, Kec. Talaud, Kab. Kepulauan Talaud.", image: "https://i.ytimg.com/vi/xlq-W5mekIg/hqdefault.jpg", uri: 'https://www.youtube.com/watch?v=xlq-W5mekIg' },
+        { id: "5", title: "Pulau Karakelang", tempat: "Bantane, Kec. Rainis, Kab. Kepulauan Talaud.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Pulau-Karakelang.jpg", uri: 'https://www.youtube.com/watch?v=4oiAJ4Sx8T4' },
+        { id: "6", title: "Desa Adat Bannada", tempat: "Adat Bannada, Kec. Gemeh, Kab. Kepulauan Talaud.", image: "https://www.celebes.co/wp-content/uploads/2020/04/Desa-Adat-Bannada.jpg", uri: 'https://www.youtube.com/watch?v=-JOD9ogm47k' },
+        { id: "7", title: "Pulau Intata", tempat: "Festival Mane'e , Kec. Karatung, Kab. Kepulauan Talaud ", image: "https://i.ytimg.com/vi/0MjAN57bIIo/hqdefault.jpg", uri: 'https://www.youtube.com/watch?v=0MjAN57bIIo' },
+        { id: "8", title: "Pulau Miangas Perbatasan Indonesia Filipina", tempat: "Miangas, Kec. Miangas, Kab. Kepulauan Talaud", image: "https://cdn2.boombastis.com/wp-content/uploads/2017/06/bandar-udara-Miangas.jpg", uri: 'https://www.youtube.com/watch?v=VTqIpFfykG4' },
       ]
     };
   }
@@ -40,7 +39,7 @@ export default class Posts extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View>
         <FlatList style={styles.list}
           data={this.state.data}
           keyExtractor={(item) => {
@@ -58,7 +57,7 @@ export default class Posts extends Component {
                 <View style={styles.card}>
                    
                   <Image style={styles.cardImage} source={{ uri: item.image }} />
-                  <Text>press picture to see video...</Text>
+                  <Text>Klik Gambar untuk melihat Video...</Text>
                   <View style={styles.cardContent}>
 
                     <View style={styles.cardtext}>
@@ -73,6 +72,10 @@ export default class Posts extends Component {
           }} />
 
 
+
+
+
+
       </View>
     );
   }
@@ -82,6 +85,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 20,
+    backgroundColor: "#f6cd61"
   },
   list: {
     backgroundColor: "#f6cd61",
@@ -130,6 +134,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 300,
     width: null,
+    borderRadius: 15
   },
   cardtext: {
     color: "red",

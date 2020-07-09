@@ -21,13 +21,9 @@ export default class CompanyDescriptionView extends Component {
     super(props);
     this.state = {
       images: [
-        require('../assets/rumahAdat/rumahadat.jpg'),
-        require('../assets/rumahAdat/rumah1.jpg'),
-        require('../assets/rumahAdat/rumah2.jpg'),
-        require('../assets/rumahAdat/rumah3.jpg'),
-        require('../assets/rumahAdat/rumah4.jpg'),
-        require('../assets/rumahAdat/rumah5.jpg'),
-        require('../assets/rumahAdat/rumah6.jpg'),
+        require('../assets/rumahAdat/RUMAH.png'),
+        require('../assets/rumahAdat/rumah5.png'),
+        require('../assets/rumahAdat/rumah6.png'),
         
       ]
     }
@@ -42,11 +38,12 @@ export default class CompanyDescriptionView extends Component {
     
     [
       {
-        text: 'watch',
-        onPress: () => Linking.openURL('https://www.youtube.com/')
+       
       },
       {
       
+      },{
+        text : 'Kembali'
       },
       {backlabel: false}
     ]);
@@ -74,7 +71,7 @@ export default class CompanyDescriptionView extends Component {
             </Text>
           </View>
           <TouchableHighlight style={[styles.buttonContainer, styles.sendButton]} onPress={() => this.onClickListener('login')}>
-            <Text style={styles.buttonText}>Reads</Text>
+            <Text style={styles.buttonText}>Selanjutnya..</Text>
           </TouchableHighlight>
         </View>
       </ScrollView>
@@ -94,6 +91,7 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: 800,
+
    
   },
   companyName: {
@@ -133,6 +131,7 @@ const styles = StyleSheet.create({
   },
   Box: {
       width: '100%',
-      height: 800
+      height: 800,
+      borderRadius: 150
   }
 }); 
